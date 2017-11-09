@@ -1,9 +1,6 @@
-/*
- * Leaflet.GeoJSONGridLayer 
- */
-var counter = 0;
-(function () {
+// require('./lib/topojson.js')
 
+(function () {
     var console = window.console || {
         error: function () {},
         warn: function () {}
@@ -14,10 +11,7 @@ var counter = 0;
             initialize: function (url, options) {
                 L.GridLayer.prototype.initialize.call(this);
                 this._url = url;
-/*                this._geojsons = {};
-                this._features = {};
-                this.geoJsonClass = (this.options.geoJsonClass ? this.options.geoJsonClass : L.GeoJSON);
-*/            },
+	    },
             createTile: function(coords){
                 // create a <canvas> element for drawing
                 var tile = L.DomUtil.create('canvas', 'leaflet-tile');
@@ -41,8 +35,7 @@ var counter = 0;
                 var counter = 0;
                 $.get( L.Util.template(this._url, coords) )
                   .done(function( data ) {
-/*                    colored(data);
-*/                    L.geoJSON(data.roads).addTo(map).eachLayer(function (layer) {  
+			L.geoJSON(data.roads).addTo(map).eachLayer(function (layer) {  
                         counter ++;
                         if(counter % 2 ) {
                             layer.setStyle( myStyle ) 

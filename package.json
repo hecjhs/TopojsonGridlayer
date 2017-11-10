@@ -1,0 +1,33 @@
+{
+  "name": "topojsongridlayer",
+  "version": "1.0.0",
+  "description": "A leaflet Gridlayer as TopojsonTileLayer ",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hecjhs/TopojsonGridlayer.git"
+  },
+  "keywords": [
+    "Leaflet",
+    "topojson",
+    "Tilelayer"
+  ],
+  "author": "hectorjhs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hecjhs/TopojsonGridlayer/issues"
+  },
+  "homepage": "https://github.com/hecjhs/TopojsonGridlayer#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "pump": "^1.0.2"
+  }
+}
